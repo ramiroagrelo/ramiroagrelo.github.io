@@ -46,8 +46,10 @@ a{color:inherit;text-decoration:none}
 /* hero */
 .hero{position:relative;min-height:calc(100svh - 74px - 30px);display:grid;align-items:end;overflow:hidden;isolation:isolate}
 .hero-img{position:absolute;inset:0;z-index:-2}
-.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 55%;filter:saturate(1.04) contrast(1.03);transform:scale(1.06);animation:zoom 14s ease-out forwards}
+.hero-img picture{display:block;width:100%;height:100%}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:saturate(1.04) contrast(1.03);transform:scale(1.06);animation:zoom 14s ease-out forwards}
 @keyframes zoom{to{transform:scale(1)}}
+@media (min-width:1000px){.hero-img img{object-position:72% 50%}}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,10,.15) 0%,rgba(11,11,10,.35) 45%,rgba(11,11,10,.96) 100%),radial-gradient(120% 70% at 0% 100%,rgba(11,11,10,.9),transparent 60%)}
 .hero .wrap{padding:0 0 64px}
 .kicker{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 Inter;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
@@ -189,6 +191,9 @@ footer.site a{color:var(--ink)}
   .sec{padding:56px 0}
   #pedido{padding-top:40px!important}
   .hero{min-height:78svh}
+  .hero-img{inset:0 0 30% 0}
+  .hero-img img{object-position:30% 58%}
+  .hero::after{background:linear-gradient(180deg,rgba(11,11,10,.05) 0%,rgba(11,11,10,.25) 40%,rgba(11,11,10,.92) 66%,#0b0b0a 72%)}
   .hero p.lead{font-size:16px}
   .s-mani .ph,.s-mani .big{display:none}
   .fame{display:none}
@@ -255,7 +260,7 @@ footer.site a{color:var(--ink)}
 
 <main id="top">
 <section class="hero">
-  <div class="hero-img"><img src="img/hero.webp" alt="Lomito de Los Goldis en tabla de madera" referrerpolicy="no-referrer"></div>
+  <div class="hero-img"><picture><source media="(min-width:1000px)" srcset="img/doble.webp"><img src="img/hero.webp" alt="Lomito de Los Goldis en tabla de madera" referrerpolicy="no-referrer"></picture></div>
   <div class="sticker" aria-label="Cuartos de final del Mundial del Lomito"><span>Mundial del Lomito<b>TOP 8</b>2026</span></div>
   <div class="wrap">
     <p class="kicker">Lomitería de barrio · Córdoba</p>
