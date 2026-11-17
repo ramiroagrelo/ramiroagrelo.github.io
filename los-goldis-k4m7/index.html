@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Los Goldis · el real antojo cordobés</title>
+<meta name="description" content="Lomitos de barrio que comen dos. Pan crocante, lomo de verdad y mayonesa casera. Ahora en General Paz, Córdoba.">
+<meta name="theme-color" content="#0b0b0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0a; --bg2:#141412; --card:#1b1a17; --ink:#f6f2ea; --mute:#a8a29a; --line:rgba(246,242,234,.14);
+  --gold:#f5b623; --gold2:#ffd36a; --chrome:linear-gradient(180deg,#fff 0%,#d9d9d9 45%,#8d8d8d 55%,#f2f2f2 100%);
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 Inter,system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+
+/* franja de muestra */
+.demo{position:relative;z-index:60;background:var(--gold);color:#111;font:600 12px/1 Inter;letter-spacing:.02em;text-align:center;padding:9px 12px}
+.demo b{font-weight:800}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;transition:background .35s,backdrop-filter .35s,border-color .35s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(11,11,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:74px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:46px;width:46px;border-radius:50%;object-fit:cover;background:#fff}
+.logo .wm{font-family:'Kaushan Script',cursive;font-size:28px;line-height:1;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 rgba(0,0,0,.6))}
+.logo small{display:block;font:700 9px/1 Inter;letter-spacing:.32em;color:var(--mute);margin-bottom:3px}
+.nav ul{display:flex;gap:26px;list-style:none;margin-left:auto;font-weight:600;font-size:14px}
+.nav ul a{opacity:.8;transition:opacity .2s}.nav ul a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font:800 14px/1 Inter;letter-spacing:.02em;padding:15px 22px;transition:transform .2s,background .2s,color .2s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:#111}.btn-gold:hover{background:var(--gold2)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink)}.btn-ghost:hover{border-color:var(--ink)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 74px - 30px);display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,10,.15) 0%,rgba(11,11,10,.35) 45%,rgba(11,11,10,.96) 100%),radial-gradient(120% 70% at 0% 100%,rgba(11,11,10,.9),transparent 60%)}
+.hero .wrap{padding:0 0 64px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 Inter;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+.hero h1{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.88;letter-spacing:-.01em;font-size:clamp(64px,12.5vw,190px);margin:18px 0 22px}
+.hero h1 .s{font-family:'Kaushan Script',cursive;text-transform:none;color:var(--gold);font-size:.62em;letter-spacing:0;display:inline-block;transform:rotate(-4deg) translateY(-.08em)}
+.hero p.lead{max-width:540px;font-size:clamp(17px,1.6vw,20px);color:#e9e3d8}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.sticker{position:absolute;right:max(4vw,24px);top:46px;width:156px;height:156px;border-radius:50%;background:var(--gold);color:#111;display:grid;place-items:center;text-align:center;font:800 12px/1.15 Inter;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 18px 50px rgba(245,182,35,.35);animation:spin 18s linear infinite}
+.sticker b{display:block;font-family:Anton;font-weight:400;font-size:30px;letter-spacing:0;line-height:1;margin:4px 0}
+.sticker span{animation:spin 18s linear infinite reverse;display:block;padding:10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;white-space:nowrap}
+.marquee .track{display:inline-flex;gap:46px;padding:20px 0;animation:mq 26s linear infinite;font-family:Anton;font-size:clamp(26px,3.4vw,44px);text-transform:uppercase;letter-spacing:.01em}
+.marquee .track span:nth-child(even){font-family:'Kaushan Script';text-transform:none;color:var(--gold);font-size:.9em}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* secciones */
+section{position:relative}
+.sec{padding:clamp(80px,11vw,150px) 0}
+.h2{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:clamp(44px,7vw,104px);line-height:.92;letter-spacing:-.005em}
+.h2 em{font-style:normal;color:var(--gold)}
+.sub{color:var(--mute);max-width:560px;font-size:18px;margin-top:18px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+
+/* manifiesto */
+.mani{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,90px);align-items:center}
+.mani .ph{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5}
+.mani .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.mani .ph:hover img{transform:scale(1.05)}
+.mani .ph .tag{position:absolute;left:18px;bottom:18px;background:rgba(11,11,10,.78);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:14px}
+.mani .ph .tag b{color:var(--gold)}
+.mani p.big{font-size:clamp(20px,2.1vw,28px);line-height:1.38;font-weight:500;margin-top:26px}
+.mani p.big mark{background:none;color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:40px}
+.stats div{background:var(--bg);padding:24px 20px}
+.stats b{display:block;font-family:Anton;font-weight:400;font-size:clamp(34px,4vw,54px);line-height:1;color:var(--ink)}
+.stats span{font-size:13px;color:var(--mute)}
+
+/* carta */
+.menu{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.item{position:relative;border-radius:var(--r);overflow:hidden;background:var(--card);min-height:420px;display:flex;align-items:end;isolation:isolate;cursor:default}
+.item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .6s}
+.item::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,rgba(11,11,10,.92))}
+.item:hover img{transform:scale(1.06);filter:saturate(1.12)}
+.item .tx{padding:26px}
+.item .n{font:700 12px/1 Inter;letter-spacing:.24em;color:var(--gold)}
+.item h3{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:clamp(30px,3vw,42px);line-height:.95;margin:10px 0 8px}
+.item p{color:#ddd6ca;font-size:15px;max-width:380px}
+.item .q{margin-top:12px;font-size:13px;color:var(--mute);font-style:italic}
+.i1{grid-column:span 7;min-height:560px}.i2{grid-column:span 5;min-height:560px}
+.i3{grid-column:span 4}.i4{grid-column:span 4}.i5{grid-column:span 4}
+.item.txt{background:var(--gold);color:#111}.item.txt::after{display:none}
+.item.txt .n{color:#111}.item.txt p,.item.txt .q{color:#2a2410}
+.item.txt .big{font-family:Anton;font-size:clamp(80px,9vw,128px);line-height:.8;margin-bottom:auto;padding:26px}
+.item.txt{flex-direction:column;align-items:stretch;justify-content:space-between}
+.menu-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:26px;color:var(--mute);font-size:14px}
+
+/* promo */
+.promo{background:var(--gold);color:#111;border-radius:calc(var(--r) + 8px);padding:clamp(34px,5vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;overflow:hidden;position:relative}
+.promo h2{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:clamp(46px,7.5vw,112px);line-height:.88}
+.promo h2 span{font-family:'Kaushan Script';text-transform:none;font-size:.62em;display:block;transform:rotate(-3deg)}
+.promo p{font-weight:600;font-size:18px;margin-top:14px;max-width:460px}
+.promo .pct{font-family:Anton;font-size:clamp(120px,17vw,250px);line-height:.8;text-align:right;letter-spacing:-.03em}
+.promo .pct small{display:block;font:800 14px/1 Inter;letter-spacing:.2em;text-align:right;margin-top:10px}
+
+/* fama */
+.fame{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.fame article{border:1px solid var(--line);border-radius:var(--r);padding:28px;background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.fame b{font-family:Anton;font-weight:400;font-size:clamp(38px,4vw,58px);line-height:1;color:var(--gold);display:block}
+.fame h3{font-size:18px;margin:12px 0 6px}
+.fame p{color:var(--mute);font-size:15px}
+
+/* opiniones */
+.reviews{columns:3 320px;column-gap:18px}
+.rv{break-inside:avoid;margin-bottom:18px;border-radius:var(--r);padding:26px;background:var(--card);border:1px solid var(--line)}
+.rv .st{color:var(--gold);letter-spacing:3px;font-size:15px}
+.rv p{font-size:17px;line-height:1.5;margin:12px 0 16px}
+.rv footer{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mute)}
+.rv footer i{width:30px;height:30px;border-radius:50%;background:#2a2824;display:grid;place-items:center;font-style:normal;font-weight:800;color:var(--ink)}
+.rv.hl{background:var(--ink);color:#111}.rv.hl p{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:34px;line-height:1}.rv.hl footer{color:#555}.rv.hl footer i{background:#111;color:#fff}
+
+/* local */
+.loc{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
+.card{border-radius:var(--r);border:1px solid var(--line);background:var(--bg2);padding:clamp(26px,3.4vw,44px)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,182,35,.12);color:var(--gold);border:1px solid rgba(245,182,35,.35);border-radius:999px;padding:8px 14px;font:800 12px/1 Inter;letter-spacing:.14em;text-transform:uppercase}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(245,182,35,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(245,182,35,0)}100%{box-shadow:0 0 0 0 rgba(245,182,35,0)}}
+.loc h3{font-family:Anton;font-weight:400;text-transform:uppercase;font-size:clamp(40px,5vw,72px);line-height:.92;margin:20px 0 10px}
+.loc dl{display:grid;grid-template-columns:auto 1fr;gap:14px 20px;margin:26px 0 30px;font-size:16px}
+.loc dt{color:var(--mute);font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding-top:2px}
+.map{border-radius:var(--r);overflow:hidden;min-height:440px;border:1px solid var(--line);filter:grayscale(.9) invert(.92) contrast(.9) hue-rotate(180deg)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block}
+
+/* final */
+.final{text-align:center;padding:clamp(90px,12vw,170px) 0;position:relative;overflow:hidden}
+.final .h2{font-size:clamp(56px,11vw,170px)}
+.final .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:34px}
+.final .glow{position:absolute;inset:auto 0 -40% 0;height:80%;background:radial-gradient(50% 50% at 50% 50%,rgba(245,182,35,.22),transparent 70%);z-index:-1}
+footer.site{border-top:1px solid var(--line);padding:34px 0 120px;color:var(--mute);font-size:13px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer.site a{color:var(--ink)}
+
+/* barra móvil */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;display:none;gap:10px;padding:10px;border-radius:20px;background:rgba(20,20,18,.9);backdrop-filter:blur(14px);border:1px solid var(--line)}
+.mbar .btn{flex:1;justify-content:center;padding:15px 10px}
+
+/* aparición */
+.rv-in{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv-in.on{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .nav ul{display:none}.nav .btn-nav{margin-left:auto}
+  .mani,.loc,.promo{grid-template-columns:1fr}
+  .promo .pct{text-align:left}.promo .pct small{text-align:left}
+  .i1,.i2,.i3,.i4,.i5{grid-column:span 12;min-height:440px}
+  .fame{grid-template-columns:1fr}
+  .sticker{width:118px;height:118px;top:22px;font-size:10px}.sticker b{font-size:23px}
+  .mbar{display:flex}
+}
+@media (max-width:560px){
+  .stats b{font-size:32px}
+  .hero .ctas .btn{flex:1;justify-content:center}
+  .nav .btn-nav{display:none}
+}
+@media (prefers-reduced-motion:reduce){.marquee .track,.sticker,.sticker span,.hero-img img{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Muestra</b> preparada por newaves para Los Goldis · No está publicada</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Los Goldis">
+      <img src="https://scontent.cdninstagram.com/v/t51.82787-19/832131250_18108343205185983_6820673273131643690_n.jpg?_nc_cat=100&amp;ig_cache_key=GLJQmTG-STc0cVVAACozA1Y05qdebmNDAQAB0j-ccb7-5&amp;ccb=7-5&amp;_nc_sid=669407&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&amp;_nc_ohc=wd4EvutPC74Q7kNvwHhzixZ&amp;_nc_oc=AdqlDkAsc3ZgFYGn04QVupGg3Z4ckkTECpE5TA12Wzy3UhRkyXkINSfF_G8h7tEveDHALXp3JvaU1IjWQG_lXLni&amp;_nc_zt=24&amp;_nc_ht=scontent.cdninstagram.com&amp;_nc_gid=Ldgf5c8SzpCoX_bPNpCekQ&amp;_nc_ss=70580&amp;_nc_ct=RQosPBUCFQIAAAA&amp;oh=00_AQS_fjTZwwNDWLz4-z9bol7fTL1Ythu-NRzNjJqKUEvQIw&amp;oe=6B023EFE" alt="Logo Los Goldis" referrerpolicy="no-referrer">
+      <span><small>LOMITERÍA</small><span class="wm">Los Goldis</span></span>
+    </a>
+    <ul>
+      <li><a href="#carta">La carta</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#local">El local</a></li>
+    </ul>
+    <a class="btn btn-gold btn-nav" href="https://www.losgoldis.com.ar" target="_blank" rel="noopener">Pedí ahora</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QeorQGhbwh5gsFetjoqIs6tiz1goxCqM8jPT0T_l-3-eDgdgVVpE4I5SDo0MXAZ8nwW5NSASJkISKjqja1YTO13QqRGEpVdWAsjIb67cmNaI2_f4mr7F4La2faCv6WZLhk4yJAbt6XBJE=w1600-h1200-k-no" alt="Lomito completo de Los Goldis con papas fritas" referrerpolicy="no-referrer"></div>
+  <div class="sticker" aria-label="Nuevo local en General Paz"><span>Nuevo local<b>Gral. Paz</b>Lima 821</span></div>
+  <div class="wrap">
+    <p class="kicker">Lomitería de barrio · Córdoba</p>
+    <h1>El real <span class="s">antojo</span><br>cordobés.</h1>
+    <p class="lead">Lomitos enormes de lomo posta, pan crocante, papas y mayonesa casera. Uno alcanza para dos (y te sobra).</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="https://www.losgoldis.com.ar" target="_blank" rel="noopener">Pedí para retirar
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#carta">Ver la carta</a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Lomitos</span><span>comen dos</span><span>Hamburguesas</span><span>mayonesa casera</span><span>Milanesas</span><span>papas crocantes</span><span>Lomo doble carne</span><span>de barrio</span>
+  <span>Lomitos</span><span>comen dos</span><span>Hamburguesas</span><span>mayonesa casera</span><span>Milanesas</span><span>papas crocantes</span><span>Lomo doble carne</span><span>de barrio</span>
+</div></div>
+
+<section class="sec">
+  <div class="wrap mani">
+    <div class="ph rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RocbUlRtgcpIndGVoL40Vd6vHbsQ9xzqZgO75ftELkj2o0BQjsaZaLnFlb0HZfr6RkjZONaBe6T5KZa3m2jVCkrDlZRCYKkvUcMOLq_zGMk695jrEds3rAH6GrzRTEiEajp_XZ2u0pI7n4=w1600-h1200-k-no" alt="Lomito en tabla de madera con papas" referrerpolicy="no-referrer" loading="lazy">
+      <div class="tag"><b>★ 4,3</b> · 133 opiniones en Google</div></div>
+    <div class="rv-in">
+      <p class="kicker">Especialistas en lomos</p>
+      <h2 class="h2" style="margin-top:16px">Hecho en el barrio.<br><em>Pensado para compartir.</em></h2>
+      <p class="big">Una lomitería de barrio que se volvió de las más buscadas de Córdoba. Pan dorado, <mark>lomo de verdad</mark>, ingredientes frescos y una <mark>mayonesa casera</mark> que la gente nombra en cada reseña.</p>
+      <div class="stats">
+        <div><b data-count="31.6" data-dec="1">0</b><span>mil seguidores en Instagram</span></div>
+        <div><b data-count="133">0</b><span>opiniones en Google</span></div>
+        <div><b>1 = 2</b><span>un lomito, dos personas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="carta" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv-in">
+      <div><p class="kicker">La carta</p><h2 class="h2" style="margin-top:16px">Lo que <em>se pide.</em></h2></div>
+      <p class="sub">Lomitos, hamburguesas y milanesas con papas fritas. Para comer en el local o retirar.</p>
+    </div>
+    <div class="menu">
+      <article class="item i1 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RSwIyZApYtzP2TqcMqPhTCNRyLPH-mvnYP3ojs9jMj_bKUZdAFj_x8lkhxG6k5vnYJ8kGU-p4duT8XQ5eadSIxYTKwMoz5TysA0dR_C23gPBLLB54uWb8Iwy1JQkFBNoeqHyvLS2hTf1iI=w1600-h1200-k-no" alt="Lomito completo cortado al medio" referrerpolicy="no-referrer" loading="lazy">
+        <div class="tx"><span class="n">01 · EL CLÁSICO</span><h3>Lomito completo</h3><p>El de siempre: pan crocante, lomo posta, todo fresco y la mayonesa de la casa. Con papas.</p><p class="q">“Hacía tiempo no comía un lomito tan rico. Súper fresco, con mucha carne.” — Romina M.</p></div></article>
+      <article class="item i2 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S4Gi-YxIabK-dtApvCpuAWqSfp3PAFG-qxTpy3DFneyAqaJaD_NhsjVJJDjI-MftcQwNErRHrIz0ZjYyV9GXzonFJfSx3f9VNjm_fAAUiUdfcyPnjO14_Yax4TZ9wRqGdMN_nLWaFjhhw=w1600-h1200-k-no" alt="Lomo doble carne" referrerpolicy="no-referrer" loading="lazy">
+        <div class="tx"><span class="n">02 · PARA VALIENTES</span><h3>Lomo doble carne</h3><p>El doble de lomo, el mismo pan crocante.</p><p class="q">“Comen 2, sobrados… ¡hasta 3!” — Mariana C.</p></div></article>
+      <article class="item i3 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RMc-QSvpxKsUv7FnIldnQkUsRAD_t-xcjGsa0m8ETwEJwufzQAWy5ickEIU61Ee-7WG-EdVOON2gUKLXfslfU3vztPdPEbtXqsvpLYL14AM1SSH-4zvp_P6YZEQy6JSo7nXkfjzzLehIk=w1600-h1200-k-no" alt="Papas fritas abundantes" referrerpolicy="no-referrer" loading="lazy">
+        <div class="tx"><span class="n">03 · PARA LA MESA</span><h3>Papas fritas</h3><p>Abundantes, crocantes por fuera y blandas por dentro.</p></div></article>
+      <article class="item i4 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TqMinU8iA9DBjz21411375hrXEZs1H62Pi_V5Q7ZdDbFyKIfpuv5XKCi3_9IJI3y7B5J4nmwDyUJ7h02-92-2p8-jgUKhPWL-_dD_-fNNVG_B3fDdhou9HT7PvepZt4WGEyi0WjUM8Ur11=w1600-h1200-k-no" alt="Lomito con papas para compartir" referrerpolicy="no-referrer" loading="lazy">
+        <div class="tx"><span class="n">04 · MITAD Y MITAD</span><h3>Súper + 4 quesos</h3><p>Pedilo mitad y mitad y probá los dos.</p><p class="q">“Realmente espectacular.” — Luis V.</p></div></article>
+      <article class="item i5 txt rv-in"><div class="big">GOLDI</div>
+        <div class="tx"><span class="n">05 · LA SORPRESA</span><h3>Hamburguesa Goldi</h3><p>La que vino a competirle al lomo.</p><p class="q">“La hamburguesa Goldi nos sorprendió muchísimo, exquisita.” — Leonela B.</p></div></article>
+    </div>
+    <div class="menu-foot rv-in"><span>Carta completa y precios actualizados en la app de pedidos.</span><a class="btn btn-ghost" href="https://www.losgoldis.com.ar" target="_blank" rel="noopener">Ver carta y pedir</a></div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="promo rv-in">
+      <div><h2><span>Lunes de</span>hamburguesas</h2><p>Todas las hamburguesas a mitad de precio. El mejor plan para arrancar la semana.</p>
+        <a class="btn" style="background:#111;color:var(--gold);margin-top:24px" href="https://www.instagram.com/los.goldis/" target="_blank" rel="noopener">Ver en Instagram</a></div>
+      <div class="pct">50%<small>OFF · TODOS LOS LUNES</small></div>
+    </div>
+    <div class="fame">
+      <article class="rv-in"><b>Top 8</b><h3>Mundial del Lomito 2026</h3><p>Llegamos a cuartos de final del torneo de lomiterías de Córdoba, votado por la gente.</p></article>
+      <article class="rv-in"><b>#2</b><h3>En el ranking de los mejores lomitos</h3><p>Así nos ubicó el tour de los mejores lomitos de Córdoba de @santi.menacho.</p></article>
+      <article class="rv-in"><b>De Pilar</b><h3>a Córdoba, por un lomito</h3><p>“Viajamos desde Pilar porque vimos una publicidad por Instagram… del 1 al 10 son un 20.” — María Belén B.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="opiniones" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv-in"><div><p class="kicker">Opiniones reales de Google</p><h2 class="h2" style="margin-top:16px">Lo dicen <em>ellos.</em></h2></div>
+      <p class="sub">96 de las 133 opiniones son de 5 estrellas.</p></div>
+    <div class="reviews">
+      <div class="rv hl rv-in"><span class="st">★★★★★</span><p>“El mejor lomito de Córdoba. Increíble.”</p><footer><i>C</i>Christian G.</footer></div>
+      <div class="rv rv-in"><span class="st">★★★★★</span><p>“Superó mis expectativas en un 1000%. Los lomos son espectaculares. En 10 minutos o menos tenés tu pedido listo.”</p><footer><i>M</i>Mariano G.</footer></div>
+      <div class="rv rv-in"><span class="st">★★★★★</span><p>“Excelente lugar de barrio. Comés uno y podés compartirlo. Las papas crocantes por fuera y blandas por dentro. El lomo, de primera calidad.”</p><footer><i>G</i>Germán E.</footer></div>
+      <div class="rv rv-in"><span class="st">★★★★★</span><p>“Riquísimos los lomos, ¡son enormes! La mayonesa casera, riquísima. Las papas también. Excelente atención.”</p><footer><i>N</i>Natasha E.</footer></div>
+      <div class="rv rv-in"><span class="st">★★★★★</span><p>“Somos clientes y siempre destacamos la higiene del lugar. Trabajan con productos de primera.”</p><footer><i>M</i>Martín S.</footer></div>
+      <div class="rv hl rv-in"><span class="st">★★★★★</span><p>“Una locura la comida. Top 3 sin dudar.”</p><footer><i>E</i>Emiliano G.</footer></div>
+      <div class="rv rv-in"><span class="st">★★★★★</span><p>“Muy bien logrado el lomo, las papas 10 y la atención excelente. Destaco la manera de trabajar en equipo.”</p><footer><i>M</i>Marcelo L.</footer></div>
+      <div class="rv rv-in"><span class="st">★★★★★</span><p>“Terrible lomo. Gigante. Un manjar. Y lo mejor, la atención de las chicas.”</p><footer><i>J</i>Jorge L.</footer></div>
+      <div class="rv rv-in"><span class="st">★★★★★</span><p>“El mejor lomito con los mejores y más frescos ingredientes, y la mayonesa excelente. Le pongo un 10.”</p><footer><i>G</i>Guillermo M.</footer></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="local" style="padding-top:0">
+  <div class="wrap loc">
+    <div class="card rv-in">
+      <span class="badge">Nuevo local</span>
+      <h3>Ahora en<br>General Paz.</h3>
+      <p style="color:var(--mute);font-size:17px">La lomitería de barrio, ahora en General Paz. Comé en el local o pedí y retirá.</p>
+      <dl>
+        <dt>Dirección</dt><dd>Lima 821, General Paz, Córdoba</dd>
+        <dt>Horario</dt><dd>Miércoles a lunes, de 20:30 a 00:30</dd>
+        <dt>Teléfono</dt><dd><a href="tel:+543512154181">0351 215-4181</a></dd>
+        <dt>Pedidos</dt><dd>Retiro en el local · WhatsApp · App</dd>
+      </dl>
+      <div class="ctas" style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-gold" href="https://wa.me/message/UJXXXMMZZOU2C1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.2-.7-2.7-1.1-4.4-3.8-4.6-4-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>Pedí por WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Los%20Goldis%20Lima%20821%20C%C3%B3rdoba" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="map rv-in"><iframe title="Mapa Los Goldis General Paz" loading="lazy" src="https://www.google.com/maps?q=Lima%20821%2C%20General%20Paz%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed"></iframe></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="glow"></div>
+  <div class="wrap">
+    <p class="kicker">Esta noche</p>
+    <h2 class="h2" style="margin-top:18px">¿Lomito<br><em>para dos?</em></h2>
+    <div class="ctas">
+      <a class="btn btn-gold" href="https://www.losgoldis.com.ar" target="_blank" rel="noopener">Pedí ahora</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/los.goldis/" target="_blank" rel="noopener">@los.goldis</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <span>© Los Goldis · Lomitería · Córdoba, Argentina</span>
+  <span>Muestra de diseño hecha por <a href="https://somosnewaves.com" target="_blank" rel="noopener">newaves</a> con las fotos y opiniones reales del local.</span>
+</div></footer>
+
+<div class="mbar">
+  <a class="btn btn-gold" href="https://www.losgoldis.com.ar" target="_blank" rel="noopener">Pedí ahora</a>
+  <a class="btn btn-ghost" href="https://wa.me/message/UJXXXMMZZOU2C1" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script defer>
+(function(){
+  function safe(f){try{f()}catch(e){}}
+  safe(function(){var n=document.getElementById('nav');var f=function(){n.classList.toggle('solid',window.scrollY>40)};f();window.addEventListener('scroll',f,{passive:true})});
+  safe(function(){
+    var els=[].slice.call(document.querySelectorAll('.rv-in'));
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.05,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){e.classList.add('on')})},4000);
+  });
+  safe(function(){
+    var nums=[].slice.call(document.querySelectorAll('[data-count]'));
+    var run=function(el){var t=parseFloat(el.dataset.count),d=+(el.dataset.dec||0),s=performance.now();
+      (function step(n){var p=Math.min(1,(n-s)/1400),v=t*(1-Math.pow(1-p,3));el.textContent=v.toFixed(d).replace('.',',');if(p<1)requestAnimationFrame(step)})(s)};
+    if(!('IntersectionObserver' in window)){nums.forEach(run);return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.05});
+    nums.forEach(function(e){io.observe(e)});
+  });
+})();
+</script>
+</body>
+</html>
