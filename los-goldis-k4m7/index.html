@@ -46,7 +46,7 @@ a{color:inherit;text-decoration:none}
 /* hero */
 .hero{position:relative;min-height:calc(100svh - 74px - 30px);display:grid;align-items:end;overflow:hidden;isolation:isolate}
 .hero-img{position:absolute;inset:0;z-index:-2}
-.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 55%;filter:saturate(1.18) contrast(1.08) brightness(.95);transform:scale(1.06);animation:zoom 14s ease-out forwards}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 55%;filter:saturate(1.04) contrast(1.03);transform:scale(1.06);animation:zoom 14s ease-out forwards}
 @keyframes zoom{to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,10,.15) 0%,rgba(11,11,10,.35) 45%,rgba(11,11,10,.96) 100%),radial-gradient(120% 70% at 0% 100%,rgba(11,11,10,.9),transparent 60%)}
 .hero .wrap{padding:0 0 64px}
@@ -92,7 +92,7 @@ section{position:relative}
 /* carta */
 .menu{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
 .item{position:relative;border-radius:var(--r);overflow:hidden;background:var(--card);min-height:420px;display:flex;align-items:end;isolation:isolate;cursor:default}
-.item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(1.15) contrast(1.06);transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .6s}
+.item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(1.03) contrast(1.02);transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .6s}
 .item::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,rgba(11,11,10,.92))}
 .item:hover img{transform:scale(1.06);filter:saturate(1.12)}
 .item .tx{padding:26px}
@@ -255,7 +255,7 @@ footer.site a{color:var(--ink)}
 
 <main id="top">
 <section class="hero">
-  <div class="hero-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RocbUlRtgcpIndGVoL40Vd6vHbsQ9xzqZgO75ftELkj2o0BQjsaZaLnFlb0HZfr6RkjZONaBe6T5KZa3m2jVCkrDlZRCYKkvUcMOLq_zGMk695jrEds3rAH6GrzRTEiEajp_XZ2u0pI7n4=w1920-h1440-k-no" alt="Lomito completo de Los Goldis con papas fritas" referrerpolicy="no-referrer"></div>
+  <div class="hero-img"><img src="img/hero.webp" alt="Lomito de Los Goldis en tabla de madera" referrerpolicy="no-referrer"></div>
   <div class="sticker" aria-label="Cuartos de final del Mundial del Lomito"><span>Mundial del Lomito<b>TOP 8</b>2026</span></div>
   <div class="wrap">
     <p class="kicker">Lomitería de barrio · Córdoba</p>
@@ -276,7 +276,7 @@ footer.site a{color:var(--ink)}
 
 <section class="sec s-mani">
   <div class="wrap mani">
-    <div class="ph rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S3y_zUwdOTWA51vrnXDYx8YHjdv8vS9P0Txhyi9tblYWKRQWGc-CZIpjKvsIPKObmfOrhMmU0irVA-6yZM5ATMOdQL8bYd3I9AcpFduymULYR_5Nx3vofplb-M9Uag2XRdFbpOlzBwpCVq=w1920-h1440-k-no" alt="Lomito en tabla de madera con papas" referrerpolicy="no-referrer" loading="lazy">
+    <div class="ph rv-in"><img src="img/tabla.webp" alt="Lomito con huevo en tabla de madera" referrerpolicy="no-referrer" loading="lazy">
       <div class="tag"><b>★ 4,3</b> · 133 opiniones en Google</div></div>
     <div class="rv-in">
       <p class="kicker">Especialistas en lomos</p>
@@ -298,13 +298,13 @@ footer.site a{color:var(--ink)}
       <p class="sub">Lomitos y hamburguesas con papas fritas. Para retirar, con delivery o en la barra de la vereda.</p>
     </div>
     <div class="menu">
-      <article class="item i1 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RSwIyZApYtzP2TqcMqPhTCNRyLPH-mvnYP3ojs9jMj_bKUZdAFj_x8lkhxG6k5vnYJ8kGU-p4duT8XQ5eadSIxYTKwMoz5TysA0dR_C23gPBLLB54uWb8Iwy1JQkFBNoeqHyvLS2hTf1iI=w1600-h1200-k-no" alt="Lomito completo cortado al medio" referrerpolicy="no-referrer" loading="lazy">
+      <article class="item i1 rv-in"><img src="img/completo.webp" alt="Lomito completo cortado al medio" referrerpolicy="no-referrer" loading="lazy">
         <div class="tx"><span class="n">01 · EL CLÁSICO</span><h3>Lomito completo</h3><p>El de siempre: pan crocante, lomo posta, todo fresco y la mayonesa de la casa. Con papas.</p><p class="q">“Hacía tiempo no comía un lomito tan rico. Súper fresco, con mucha carne.” — Romina M.</p></div></article>
-      <article class="item i2 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S4Gi-YxIabK-dtApvCpuAWqSfp3PAFG-qxTpy3DFneyAqaJaD_NhsjVJJDjI-MftcQwNErRHrIz0ZjYyV9GXzonFJfSx3f9VNjm_fAAUiUdfcyPnjO14_Yax4TZ9wRqGdMN_nLWaFjhhw=w1600-h1200-k-no" alt="Lomo doble carne" referrerpolicy="no-referrer" loading="lazy">
+      <article class="item i2 rv-in"><img src="img/doble.webp" alt="Lomo doble carne" referrerpolicy="no-referrer" loading="lazy">
         <div class="tx"><span class="n">02 · PARA VALIENTES</span><h3>Lomo doble carne</h3><p>El doble de lomo, el mismo pan crocante.</p><p class="q">“Comen 2, sobrados… ¡hasta 3!” — Mariana C.</p></div></article>
-      <article class="item i3 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RMc-QSvpxKsUv7FnIldnQkUsRAD_t-xcjGsa0m8ETwEJwufzQAWy5ickEIU61Ee-7WG-EdVOON2gUKLXfslfU3vztPdPEbtXqsvpLYL14AM1SSH-4zvp_P6YZEQy6JSo7nXkfjzzLehIk=w1600-h1200-k-no" alt="Papas fritas abundantes" referrerpolicy="no-referrer" loading="lazy">
+      <article class="item i3 rv-in"><img src="img/papas.webp" alt="Lomito y papas para llevar" referrerpolicy="no-referrer" loading="lazy">
         <div class="tx"><span class="n">03 · PARA LA MESA</span><h3>Papas fritas</h3><p>Abundantes, crocantes por fuera y blandas por dentro.</p></div></article>
-      <article class="item i4 rv-in"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TqMinU8iA9DBjz21411375hrXEZs1H62Pi_V5Q7ZdDbFyKIfpuv5XKCi3_9IJI3y7B5J4nmwDyUJ7h02-92-2p8-jgUKhPWL-_dD_-fNNVG_B3fDdhou9HT7PvepZt4WGEyi0WjUM8Ur11=w1600-h1200-k-no" alt="Lomito con papas para compartir" referrerpolicy="no-referrer" loading="lazy">
+      <article class="item i4 rv-in"><img src="img/compartir.webp" alt="Lomitos para compartir con papas" referrerpolicy="no-referrer" loading="lazy">
         <div class="tx"><span class="n">04 · MITAD Y MITAD</span><h3>Súper + 4 quesos</h3><p>Pedilo mitad y mitad y probá los dos.</p><p class="q">“Realmente espectacular.” — Luis V.</p></div></article>
       <article class="item i5 txt rv-in"><div class="big">GOLDI</div>
         <div class="tx"><span class="n">05 · LA SORPRESA</span><h3>Hamburguesa Goldi</h3><p>La que vino a competirle al lomo.</p><p class="q">“La hamburguesa Goldi nos sorprendió muchísimo, exquisita.” — Leonela B.</p></div></article>
